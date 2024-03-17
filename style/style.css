@@ -60,7 +60,7 @@ button:hover {
   opacity: 0.9;
 }
 
-#result > span {
+#result {
   font-size: 32px;
   font-weight: bold;
 }

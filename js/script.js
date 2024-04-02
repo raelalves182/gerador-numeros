@@ -3,20 +3,20 @@ const button = document.getElementById('generate');
 button.addEventListener('click', function() {
   const min = parseInt(document.getElementById('min').value);
   const max = parseInt(document.getElementById('max').value);
-  const result = document.getElementById('result')
+  const resultElement = document.getElementById('result')
   let animation;
 
   animation = setInterval(() => {
-    result.innerHTML = Math.floor(Math.random() * (max - min) + min);
+    const randomNumber = Math.floor(Math.random() * (max - min) + min);
+
+    if(isNaN(randomNumber)) {
+      resultElement.textContent = "Valor Inválido";
+    } else {
+      resultElement.textContent = randomNumber;
+    }
   }, 50)
 
   setTimeout(() => {
     clearInterval(animation)
   }, 500)
-
-  if(isNaN(result)) {
-    result = 'Valor inválido';
-  }
-
-  document.querySelector('#result > span').textContent = result;
 })

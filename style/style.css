@@ -10,7 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url('../goku.png') no-repeat center/cover;
+  background: url('../assets/goku.png') no-repeat center/cover;
   font-family: "Josefin Sans", sans-serif;
 }
 

@@ -7,7 +7,7 @@ button.addEventListener('click', function() {
   let animation;
 
   animation = setInterval(() => {
-    const randomNumber = Math.floor(Math.random() * (max - min) + min);
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
     if(isNaN(randomNumber)) {
       resultElement.textContent = "Valor Inválido";
